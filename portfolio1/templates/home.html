@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+<section class="projects">
+    {% for project in projects %}
+    <a href="#" class="u-bare-link">
+        <article class="project-card">
+            <img class="project-card__image" src="{{ url_for('static',filename=project['thumb']) }}" alt="{{ project['name'] }} hero image">
+            <header class="project-card__meta">
+                <ul class="categories">
+                    {% for category in project['categories'] %}
+                        <li class="category_tag">{{ category }}</li>
+                    {% endfor %}
+                    <h2 class="project-card__name">{{ project['title'] }}</h2>
+                </ul>
+                
+            </header>
+        </article>
+    </a>
+    {% endfor %}
+
+</section>
+</main>
+{% endblock %}

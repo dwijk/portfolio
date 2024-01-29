@@ -1,0 +1,101 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 50px;
+    
+    text-align: center;
+   
+}
+
+.nav__link{
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+}
+
+
+.nav__link:hover{
+   font-weight: bold;
+}
+.main{
+   margin: 0 auto;
+}
+.main-about{
+    max-width: 500px;
+    line-height: 150%;
+    padding: 4px;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: antiquewhite;
+    margin-bottom: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.contact__detail{
+    margin-left: 3ch;
+}
+.contact__link{
+    color: black;
+}
+.contact__link:hover{
+    color: rgb(23, 71, 214);
+}
+
+.projects{
+    max-width: 400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+
+@media (min-width: 48.75em){
+    .projects{
+        grid-template-columns: repeat(2,1fr);
+        max-width: 700px;
+    }  
+}
+@media (min-width: 78.75em){
+    .projects{
+        grid-template-columns: repeat(3,1fr);
+        max-width: 1000px;
+    }  
+}
+
+.project-card{
+    padding: 0.75rem 0;
+    margin-right: 10px;
+}
+
+.project-card__image{
+    max-width: 100%;
+    margin-bottom: 2px;
+
+}
+
+.project-card__meta{
+    padding: 0 1.25rem;
+}
+
+.u-bare-link{
+   text-decoration: none;
+}
+.project-card__name{
+    color: rgb(29, 26, 26);
+}
+
+.categories{
+    list-style: none;
+    color: rgb(34, 48, 48);
+    letter-spacing: 0.1rem;
+}
+.categories:hover{
+    text-decoration: underline;
+}
+.categories__tag:not(:last-of-type)::after{
+    content: "|";
+    margin: 0 0.25rem;
+}
+
